@@ -3,5 +3,5 @@ import keyboardHighlights from "./keyboardHighlights.js";
 import doTyping from './doTyping.js';
 
 makeKeyboard();
-keyboardHighlights();
 doTyping();
+keyboardHighlights();

@@ -11,7 +11,7 @@ export default function doTyping() {
             } else {
                 switch (ev.target.id) {
                     case 'Backspace':
-                        textArea.value = textArea.value.substring(0, textArea.value.length - 1)
+                        textArea.value = textArea.value.substring(0, textArea.value.length - 1);
                         break;
                     case 'Space':
                         textArea.value += " ";
