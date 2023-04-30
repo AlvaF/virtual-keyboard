@@ -1,1 +1,14 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+.keyboard {
+  margin: 5% auto;
+  width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.keyItem {
+  width: 20px;
+}
+/*# sourceMappingURL=styles.css.map */

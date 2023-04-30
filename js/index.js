@@ -10,3 +10,18 @@ let keyboard = [192, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 45, 61, 8, 9, 113, 
 //     keyboard.push(ev.charCode);
 //     console.log(keyboard);
 // }
+let createKeyboard = () => {
+    let out = '<div class="keyboard"></div>';
+    document.querySelector('body').insertAdjacentHTML('afterbegin', out);
+    out = '';
+    // keyboard.forEach((el) => {
+    //     out += `<div class="keyItem"> ${String.fromCodePoint(el)} </div>`;
+    //     document.querySelector('.keyboard').insertAdjacentHTML('afterbegin', out);
+    // })
+    for (let i = 0; i < keyboard.length; i++) {
+        out += `<div class="keyItem"> ${String.fromCharCode(keyboard[i])} </div>`;
+        document.querySelector('.keyboard').insertAdjacentHTML('afterbegin', out);
+    }
+}
+
+createKeyboard()
