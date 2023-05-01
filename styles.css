@@ -37,12 +37,13 @@ body {
           box-sizing: border-box;
 }
 
-.keyItem:nth-child(even) {
+.keyItem:nth-child(3n) {
   background: rgba(56, 56, 56, 0.067);
 }
 
 .text {
   margin: 50px auto;
+  height: 20vh;
   width: 80%;
 }
 

@@ -2,6 +2,7 @@ export default function doTyping(createkeyboard) {
     const keyboard = document.querySelector('.keyboard');
     let keyElements = document.querySelectorAll('.keyItem');
     const textArea = document.querySelector('.text');
+
     keyElements.forEach((el) => {
         el.addEventListener('click', (ev) => {
             console.log(ev.target.id);
