@@ -2,18 +2,39 @@ import makeKeyboard from "./createKeyboard.js";
 import keyboardHighlights from "./keyboardHighlights.js";
 import doTyping from './doTyping.js';
 import keyboards from './keyboards.js';
+const { engKeyboard, engCapsKeyboard, rusKeyboard, rusCapsKeyboard } = keyboards;
 const body = document.querySelector('body');
+let curLang = 'en';
+let curKeyboard = engKeyboard;
+let capsPressed = false;
+
+let savedLanguage = localStorage.getItem('keyboardLanguage');
+if (savedLanguage === 'en') {
+    curLang = 'en';
+    curKeyboard = engKeyboard;
+} else if (savedLanguage === 'ru') {
+    curLang = 'ru';
+    curKeyboard = rusKeyboard;
+} else {
+    curLang = 'en';
+    curKeyboard = engKeyboard;
+}
+// const layoutMap = navigator.keyboard.getLayoutMap();
+// const layoutPromise = navigator.keyboard.getLayoutMap();
+
+// const keyboard = navigator.keyboard;
+// keyboard.getLayoutMap().then((keyboardLayoutMap) => {
+//     const upKey = keyboardLayoutMap.get("KeyW");
+//     window.alert(`Press ${upKey} to move up.`);
+// });
 // let capsLockBtn = 
 
-const { engKeyboard, engCapsKeyboard, rusKeyboard, rusCapsKeyboard } = keyboards;
+
 body.innerHTML = "<textarea class='text'></textarea>"
 let out = '<div class="keyboard"></div><div class="describtion"><p>Зажмите Shift и Alt для смены языка</p></div>';
 body.insertAdjacentHTML('afterbegin', out);
 
 
-let curLang = 'en';
-let curKeyboard = engKeyboard;
-let capsPressed = false;
 
 
 makeKeyboard(curKeyboard);
@@ -27,10 +48,14 @@ function changeLang(event) {
         if (curLang === 'en') {
             curLang = 'ru';
             capsPressed === true ? curKeyboard = rusCapsKeyboard : curKeyboard = rusKeyboard;
+            localStorage.setItem('keyboardLanguage', 'ru');
+            console.log(localStorage);
 
         } else {
             curLang = 'en';
             capsPressed === true ? curKeyboard = engCapsKeyboard : curKeyboard = engKeyboard;
+            localStorage.setItem('keyboardLanguage', 'en');
+            console.log(localStorage);
         }
         makeKeyboard(curKeyboard);
         doTyping();
@@ -57,7 +82,7 @@ const pressCapsLock = (event) => {
 
 document.addEventListener('keydown', changeLang);
 document.addEventListener('keydown', pressCapsLock);
-document.querySelector('#CapsLock').addEventListener('click', pressCapsLock)
+document.querySelector('.CapsLock').addEventListener('click', pressCapsLock)
 
 
 

@@ -17,10 +17,12 @@ export default function doTyping() {
                     case 'Space':
                         textArea.value += " ";
                         break;
-                    // case 'CapsLock':
-                    //     capsPressed?
-                    //     createkeyboard()
-                    //     break;
+                    case 'Enter':
+                        textArea.textContent += '\n'
+                        break;
+                    case 'Delete':
+                        textArea.value = textArea.value.
+                        break;
                 }
             }
         })
