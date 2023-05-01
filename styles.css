@@ -77,4 +77,8 @@ body {
 .Enter {
   grid-column: span 2;
 }
+
+.Tab {
+  grid-column: span 2;
+}
 /*# sourceMappingURL=styles.css.map */

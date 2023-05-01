@@ -5,10 +5,8 @@ export default function doTyping() {
 
     keyElements.forEach((el) => {
         el.addEventListener('click', (ev) => {
-            console.log(ev.target.id);
-            console.log()
-            if (ev.target.id.length <= 1) {
-                textArea.value += ev.target.id
+            if (ev.target.outerText.length <= 1) {
+                textArea.value += ev.target.outerText
             } else {
                 switch (ev.target.id) {
                     case 'Backspace':
@@ -18,10 +16,13 @@ export default function doTyping() {
                         textArea.value += " ";
                         break;
                     case 'Enter':
-                        textArea.textContent += '\n'
+                        textArea.textContent += `${textArea.textContent}\n`
                         break;
                     case 'Delete':
-                        textArea.value = textArea.value.
+                        textArea.value = textArea.value.slice(0, -1);
+                        break;
+                    case 'Tab':
+                        textArea.value += " "
                         break;
                 }
             }

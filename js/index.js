@@ -19,16 +19,6 @@ if (savedLanguage === 'en') {
     curLang = 'en';
     curKeyboard = engKeyboard;
 }
-// const layoutMap = navigator.keyboard.getLayoutMap();
-// const layoutPromise = navigator.keyboard.getLayoutMap();
-
-// const keyboard = navigator.keyboard;
-// keyboard.getLayoutMap().then((keyboardLayoutMap) => {
-//     const upKey = keyboardLayoutMap.get("KeyW");
-//     window.alert(`Press ${upKey} to move up.`);
-// });
-// let capsLockBtn = 
-
 
 body.innerHTML = "<textarea class='text'></textarea>"
 let out = '<div class="keyboard"></div><div class="describtion"><p>Зажмите Shift и Alt для смены языка</p></div>';
