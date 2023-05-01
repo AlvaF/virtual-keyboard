@@ -13,8 +13,8 @@ body {
   width: 80%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[14];
-      grid-template-columns: repeat(14, 1fr);
+  -ms-grid-columns: (1fr)[15];
+      grid-template-columns: repeat(15, 1fr);
   row-gap: 5px;
   -webkit-column-gap: 5px;
           column-gap: 5px;
@@ -56,5 +56,25 @@ body {
   text-align: center;
   color: #1a1a1a;
   font-size: 24px;
+}
+
+.CapsLock {
+  grid-column: span 2;
+}
+
+.Backspace {
+  grid-column: span 2;
+}
+
+.Space {
+  grid-column: span 2;
+}
+
+.Shift {
+  grid-column: span 2;
+}
+
+.Enter {
+  grid-column: span 2;
 }
 /*# sourceMappingURL=styles.css.map */
