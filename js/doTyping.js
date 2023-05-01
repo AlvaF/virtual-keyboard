@@ -16,7 +16,7 @@ export default function doTyping() {
                         textArea.value += " ";
                         break;
                     case 'Enter':
-                        textArea.textContent += `${textArea.textContent}\n`
+                        textArea.value += `\n`
                         break;
                     case 'Delete':
                         textArea.value = textArea.value.slice(0, -1);
