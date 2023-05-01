@@ -1,4 +1,4 @@
-export default function doTyping(createkeyboard) {
+export default function doTyping() {
     const keyboard = document.querySelector('.keyboard');
     let keyElements = document.querySelectorAll('.keyItem');
     const textArea = document.querySelector('.text');
@@ -17,9 +17,10 @@ export default function doTyping(createkeyboard) {
                     case 'Space':
                         textArea.value += " ";
                         break;
-                    case 'CapsLock':
-                        createkeyboard()
-                        break;
+                    // case 'CapsLock':
+                    //     capsPressed?
+                    //     createkeyboard()
+                    //     break;
                 }
             }
         })

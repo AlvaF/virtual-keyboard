@@ -50,4 +50,11 @@ body {
 .active {
   border: 3px solid yellowgreen;
 }
+
+.describtion {
+  margin: 0 auto;
+  text-align: center;
+  color: #1a1a1a;
+  font-size: 24px;
+}
 /*# sourceMappingURL=styles.css.map */

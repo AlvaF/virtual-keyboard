@@ -4,7 +4,7 @@ export default function makeKeyboard(defaultLang) {
 
     let createKeyboard = () => {
         let out = "";
-        document.onload = defaultLang.forEach((el) => {
+        defaultLang.forEach((el) => {
             out += `<div class="keyItem" id="${el}"> ${el} </div>`;
             document.querySelector('.keyboard').innerHTML = out;
         })
